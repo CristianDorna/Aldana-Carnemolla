@@ -278,7 +278,7 @@
       width: 1px;
     }
     @media (max-width: 800px) {
-      :root { --header-space: 49px; --header-offset: 65px; }
+      :root { --header-space: 70px; --header-offset: 86px; }
       .topbar { padding-bottom: 12px; padding-top: 17px; }
       .nav-links { gap: 16px; }
       .nav-links a { font-size: .8rem; }
@@ -290,15 +290,32 @@
       .contact-panel { align-items: flex-start; flex-direction: column; }
     }
     @media (max-width: 560px) {
-      .topbar { padding-left: 20px; padding-right: 20px; }
-      .brand { font-size: 1.1rem; }
-      .nav-links { gap: 10px; }
-      .nav-links a { font-size: .74rem; }
-      .nav-links a:nth-child(2) { display: none; }
-      .nav-links .nav-contact { padding: 7px 11px; }
-      .hero { display: flex; flex-direction: column; align-items: stretch; min-height: auto; padding: 58px 23px 72px; }
+      :root { --header-space: 88px; --header-offset: 102px; }
+      .topbar {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 3px;
+        padding: 8px 18px 5px;
+      }
+      .brand { font-size: 1rem; line-height: 1.35; }
+      .nav-links {
+        gap: 18px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links a {
+        align-items: center;
+        display: inline-flex;
+        flex: 0 0 auto;
+        font-size: .78rem;
+        min-height: 44px;
+        white-space: nowrap;
+      }
+      .nav-links .nav-contact { padding: 5px 11px; }
+      .hero { display: flex; flex-direction: column; align-items: stretch; min-height: auto; padding: 38px 23px 72px; }
       .hero-copy { order: 0; }
-      h1 { font-size: clamp(3.1rem, 14vw, 4.5rem); }
+      h1 { font-size: clamp(2.7rem, 12vw, 4.5rem); }
       .hero-description { font-size: 1.2rem; }
       .hero-actions { align-items: stretch; flex-direction: column; }
       .button { width: 100%; }
